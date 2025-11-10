@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: my_database
+    ports:
+      - "3306:3306"
+
+  cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
